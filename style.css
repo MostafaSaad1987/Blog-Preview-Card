@@ -101,6 +101,14 @@ img {
     color: hsl(47, 88%, 63%);
 }
 
+.sr-only {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 /* 350px is 1:1 to the size provided in the images for desktop, but it won't fit on the mobile dimensions provided. */
 @media (max-width: 600px) {
     .card {
