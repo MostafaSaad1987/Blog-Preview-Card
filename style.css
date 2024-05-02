@@ -1,0 +1,108 @@
+/* Added to make hover effects look nicer. */
+* {
+    transition: 0.25s all;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+
+    background-color: hsl(47, 88%, 63%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Figtree', monospace;
+    font-size: 16px;
+    color: hsl(0, 0%, 7%);
+}
+
+img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card {
+    display: grid;
+
+    height: 500px;
+    width: 350px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+    filter: drop-shadow(10px 10px 0px #000000);
+
+    padding: 20px;
+
+    justify-items: stretch;
+    align-items: center;
+}
+
+.type-button {
+    display: grid;
+    text-align: center;
+    align-items: center;
+
+    width: 25%;
+    height: 50%;
+    border-radius: 5px;
+    background-color: hsl(47, 88%, 63%);
+    font-weight: 700;
+}
+
+.date {
+    margin: 0;
+    font-size: 0.83em;
+    font-weight: 500;
+}
+
+.title {
+    font-weight: 800;
+    margin-bottom: 0;
+
+    cursor: pointer;
+}
+
+.description {
+    color: hsl(0, 0%, 50%);
+    font-weight: 300;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-image {
+    max-height: 30px;
+    max-width: 30px;
+
+    margin: 0;
+}
+
+.author-name {
+    font-weight: 800;
+}
+
+.card:hover {
+    filter: drop-shadow(20px 20px 0px black);
+}
+
+.title:hover,
+.author-name:hover {
+    color: hsl(47, 88%, 63%);
+}
+
+/* 350px is 1:1 to the size provided in the images for desktop, but it won't fit on the mobile dimensions provided. */
+@media (max-width: 600px) {
+    .card {
+        width: 300px;
+    }
+}
